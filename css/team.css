@@ -1,0 +1,812 @@
+@import url('http://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+body {
+  background-color: #131316;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden; /* Add this line */
+}
+
+
+/* ---------animation-------*/
+
+section {
+  display: grid;
+  min-height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.hidden-left {
+  transform: translateX(-50%);
+}
+
+.hidden-right {
+  transform: translateX(50%);
+}
+.hidden-right30 {
+  transform: translateX(10%);
+}
+.hidden-top {
+  transform: translateY(-100%);
+}
+.hidden-top30 {
+  transform: translateY(-20%);
+}
+
+.hidden-bottom {
+  transform: translateY(100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+}
+.hidden-center {
+  transform: translateY(100%);
+}
+
+/* update classes */
+.hidden-bottom {
+  transform: translateY(50%);
+}
+
+.show {
+  transform: translateY(0);
+}
+
+
+.gallerys:nth-child(1){
+  transition-delay: 600ms;
+}
+.gallerys:nth-child(2){
+  transition-delay: 400ms;
+}
+.gallerys:nth-child(3){
+  transition-delay: 200ms;
+}
+.gallerys:nth-child(4){
+  transition-delay: 400ms;
+}
+.gallerys:nth-child(5){
+  transition-delay: 600ms;
+}
+/* ---------animation-------*/
+
+
+  .additionaltext {
+    font-size: 18px;
+  }
+
+/* ---------textplacement-------*/  
+
+/* ---------text-------*/  
+
+.contenthalf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+  }
+  
+  .text {
+    flex-basis: 50%;
+    padding-right: 50px;
+  }
+  
+  .text h1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 60px;
+    text-align: left;
+    margin: 300px 0 0 250px;
+    padding: 0 20px;
+  }
+  
+  .text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 0 250px;
+    padding: 0 20px;
+  }
+
+/* ---------1st page-------*/ 
+/* ---------Images-------*/ 
+  .gallery{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin: -40px 200px 0 0;
+}
+  .image {
+    width: 100px;
+    height: 500px;
+    margin: 4px;
+    border-radius: 30px;
+    position: relative;
+    transition: width 0.5s;
+    overflow: hidden;
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+.image:hover{
+    width: 400px;
+    cursor: pointer;
+}
+.image:hover img{
+    transform: scale(1.1);
+}
+.image:hover .img-text{
+    transform: translateY(0);
+}
+
+/* ---------1st page button-------*/ 
+
+.circle {
+  display: flex;
+  justify-content: left; /* center horizontally */
+  margin-top: -120px; /* adjust top margin */
+  margin-left: 265px;
+}
+
+button {
+  width: 170px;
+  height: 50px;
+  border: 0;
+  outline: none;
+  background: #2f2f2f;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4); 
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .circle {
+    margin-top: 20px; /* adjust top margin */
+  }
+
+  button {
+    width: 120px; /* adjust width */
+    height: 40px; /* adjust height */
+    font-size: 12px; /* adjust font size */
+    border-radius: 30px; /* adjust border radius */
+  }
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.checkbox {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: -40px;
+    opacity: 0;
+}
+.checkbox svg {
+    width: 50px;
+    margin: 0 0 0 0;
+}
+svg path {
+    stroke-width: 3;
+    stroke: #fff;
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+    stroke-linecap: round;
+}
+.active {
+    background: #2b5dff;
+    transition: 1s;
+}
+.active .checkbox {
+    right: 0;
+    opacity: 1;
+    transition: 1s;
+}
+.active p {
+    margin-right: 50px;
+    margin-top: 10px;
+    transition: 1s;
+}
+.active svg path {
+    stroke-dashoffset: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
+/* ---------end of first page-------*/ 
+/* ---------2nd page-------*/ 
+.text2nd h1 {
+  display: flex;
+  font-size: 60px;
+  text-align: center;
+  margin: 300px 0 0 250px;
+  padding: 0 20px;
+}
+.text2nd p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 0 250px;
+  padding: 0 20px;
+}
+/* ---------2nd page slider-------*/ 
+.container {
+  max-width: 1420px;
+  width: 100%;
+  padding: 40px 0;
+  top: -500px;
+}
+.slide-container {
+  margin: 0 30px;
+  overflow: hidden;
+}
+.card {
+  background: #fff;
+  border-radius: 30px;
+}
+.card .image-box {
+  height: 300px;
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.card .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+.card .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.profile-details .name {
+  font-size: 25px;
+  font-weight: 500;
+  color: #000;
+}
+.profile-details .job {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+
+.swiper-navBtn {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 30%;
+  top: 220px; 
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+}
+/* ---------2nd page end -------*/
+/* ---------3rd page-------*/
+.profiless:nth-child(1){
+  transition-delay: 600ms;
+}
+.text3rd h1 {
+  display: flex;
+  font-size: 60px;
+  text-align: center;
+  margin: -400px 0 0 1350px;
+  padding: 0 20px;
+}
+.text3rd p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 0 1350px;
+  padding: 0 20px;
+}
+:root
+{
+  --bg: #152533;
+}
+.profile {
+  top: -1000px;
+  left: 200px;
+  position: relative;
+  transition: 0.5s;
+  height: 100px;
+  width: 410px;
+  transition-delay: 0.5s;
+  background: transparent;
+  display: flex;
+}
+.profile.active {
+  top: -1100px;
+  height: 450px;
+  transition-delay: 0s;
+}
+.profile .person {
+  position: relative;
+  width: 400px;
+  min-height: 150px;
+  background: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 60px 40px 30px;
+}
+.profile .person .imagebox {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 10;
+}
+.profile .person .imagebox img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile .person .description {
+  position: relative;
+  text-align: center;
+}
+.profile .person .description h2 {
+  font-size: 1.2em;
+  line-height: 1.05em;
+  font-weight: 600;
+  color: #fff;
+}
+.profile .person .description span {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+.profile .person .toggle {
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  padding: 5px 15px;
+  background:#fff ;
+  border-radius: 30px;
+  transform: translateY(50%);
+  border: 6px solid var(--bg);
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.profile.active .person .toggle {
+  background: #ff4383;
+  color: #fff;
+}
+.profile .person .toggle::before {
+  content: 'Hire me';
+  color: #000;
+}
+.profile.active .person .toggle::before {
+  content: 'Close';
+}
+.profile .contact {
+  position: relative;
+  top: 30px;
+  width: 85%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.profile.active .contact {
+  height: 325px;
+}
+.profile .contact li {
+  list-style: none;
+  width: 100%;
+  min-width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  transition: 0.5s;
+  opacity: 0;
+  transform: scale(0);
+  padding: 10px 30px;
+}
+.profile.active .contact li {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: calc(0.25s * var(--i));
+}
+.profile.active .contact:hover li {
+  opacity: 0.15;
+  filter: blur(2px);
+  transition-delay: 0.5s;
+}
+.profile.active .contact li:hover {
+  opacity: 1;
+  filter: blur(0px);
+}
+.profile .contact li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+.profile .contact li a .iconbox{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: var(--clr);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.profile .contact li a .iconbox i {
+  color: #fff;
+  font-size: 1.5em;
+}
+.profile .contact li a p {
+  color: #666;
+  font-size: 1.1em;
+}
+.profile .contact li a:hover p {
+  color: #000;
+}
+/* ---------2nd profile-------*/
+.profilesss:nth-child(1){
+  transition-delay: 400ms;
+}
+.profile2nd {
+  top: -1325px;
+  left: 700px;
+  position: relative;
+  transition: 0.5s;
+  height: 100px;
+  width: 410px;
+  transition-delay: 0.5s;
+  background: transparent;
+  display: flex;
+}
+.profile2nd.active2nd {
+  top: -1100px;
+  height: 450px;
+  transition-delay: 0s;
+}
+.profile2nd .person2nd {
+  position: relative;
+  width: 400px;
+  min-height: 150px;
+  background: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 60px 40px 30px;
+}
+.profile2nd .person2nd .imagebox2nd {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 10;
+}
+.profile2nd .person2nd .imagebox2nd img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile2nd .person2nd .description2nd {
+  position: relative;
+  text-align: center;
+}
+.profile2nd .person2nd .description2nd h2 {
+  font-size: 1.2em;
+  line-height: 1.05em;
+  font-weight: 600;
+  color: #fff;
+}
+.profile2nd .person2nd .description2nd span {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+.profile2nd .person2nd .toggle2nd {
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  padding: 5px 15px;
+  background:#fff ;
+  border-radius: 30px;
+  transform: translateY(50%);
+  border: 6px solid var(--bg);
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.profile2nd.active2nd .person2nd .toggle2nd {
+  background: #ff4383;
+  color: #fff;
+}
+.profile2nd .person2nd .toggle2nd::before {
+  content: 'Hire me';
+  color: #000;
+}
+.profile2nd.active2nd .person2nd .toggle2nd::before {
+  content: 'Close';
+}
+.profile2nd .contact2nd {
+  position: relative;
+  top: 30px;
+  width: 85%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.profile2nd.active2nd .contact2nd {
+  height: 325px;
+}
+.profile2nd .contact2nd li {
+  list-style: none;
+  width: 100%;
+  min-width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  transition: 0.5s;
+  opacity: 0;
+  transform: scale(0);
+  padding: 10px 30px;
+}
+.profile2nd.active2nd .contact2nd li {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: calc(0.25s * var(--i));
+}
+.profile2nd.active2nd .contact2nd:hover li {
+  opacity: 0.15;
+  filter: blur(2px);
+  transition-delay: 0.5s;
+}
+.profile2nd.active2nd .contact2nd li:hover {
+  opacity: 1;
+  filter: blur(0px);
+}
+.profile2nd .contact2nd li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+.profile2nd .contact2nd li a .iconbox2nd{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: var(--clr);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.profile2nd .contact2nd li a .iconbox2nd i {
+  color: #fff;
+  font-size: 1.5em;
+}
+.profile2nd .contact2nd li a p {
+  color: #666;
+  font-size: 1.1em;
+}
+.profile2nd .contact2nd li a:hover p {
+  color: #000;
+}
+/* ---------3rd profile-------*/
+.profilessss:nth-child(1){
+  transition-delay: 200ms;
+}
+.profile3rd {
+  top: -1650px;
+  left: 1200px;
+  position: relative;
+  transition: 0.5s;
+  height: 100px;
+  width: 410px;
+  transition-delay: 0.5s;
+  background: transparent;
+  display: flex;
+}
+.profile3rd.active3rd {
+  top: -1100px;
+  height: 450px;
+  transition-delay: 0s;
+}
+.profile3rd .person3rd {
+  position: relative;
+  width: 400px;
+  min-height: 150px;
+  background: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 60px 40px 30px;
+}
+.profile3rd .person3rd .imagebox3rd {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 10;
+}
+.profile3rd .person3rd .imagebox3rd img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile3rd .person3rd .description3rd {
+  position: relative;
+  text-align: center;
+}
+.profile3rd .person3rd .description3rd h2 {
+  font-size: 1.2em;
+  line-height: 1.05em;
+  font-weight: 600;
+  color: #fff;
+}
+.profile3rd .person3rd .description3rd span {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+.profile3rd .person3rd .toggle3rd {
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  padding: 5px 15px;
+  background:#fff ;
+  border-radius: 30px;
+  transform: translateY(50%);
+  border: 6px solid var(--bg);
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.profile3rd.active3rd .person3rd .toggle3rd {
+  background: #ff4383;
+  color: #fff;
+}
+.profile3rd .person3rd .toggle3rd::before {
+  content: 'Hire me';
+  color: #000;
+}
+.profile3rd.active3rd .person3rd .toggle3rd::before {
+  content: 'Close';
+}
+.profile3rd .contact3rd {
+  position: relative;
+  top: 30px;
+  width: 85%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.profile3rd.active3rd .contact3rd {
+  height: 325px;
+}
+.profile3rd .contact3rd li {
+  list-style: none;
+  width: 100%;
+  min-width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  transition: 0.5s;
+  opacity: 0;
+  transform: scale(0);
+  padding: 10px 30px;
+}
+.profile3rd.active3rd .contact3rd li {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: calc(0.25s * var(--i));
+}
+.profile3rd.active3rd .contact3rd:hover li {
+  opacity: 0.15;
+  filter: blur(2px);
+  transition-delay: 0.5s;
+}
+.profile3rd.active3rd .contact3rd li:hover {
+  opacity: 1;
+  filter: blur(0px);
+}
+.profile3rd .contact3rd li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+.profile3rd .contact3rd li a .iconbox3rd{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: var(--clr);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.profile3rd .contact3rd li a .iconbox3rd i {
+  color: #fff;
+  font-size: 1.5em;
+}
+.profile3rd .contact3rd li a p {
+  color: #666;
+  font-size: 1.1em;
+}
+.profile3rd .contact3rd li a:hover p {
+  color: #000;
+}
+/* ---------4th profile-------*/
